@@ -10,10 +10,10 @@ const Card = () => {
         <Content>
             <UserInfo>
                 <UserInfo>
-                    <UserPicture src="https://uploads.metropoles.com/wp-content/uploads/2022/10/18170226/Foto-com-metade-do-rosto-de-Lula-e-Bolsonaro.jpg"/>
+                    <UserPicture src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/User_icon-cp.svg/1200px-User_icon-cp.svg.png"/>
                     <div>
                         <h4>
-                            Jair Messias Inacio da Silva
+                            Rian Vieira de Jesus
                         </h4>
                         <p>Há 8 minutos</p>
                     </div>
