@@ -1,11 +1,19 @@
+import { useNavigate } from 'react-router-dom'
 
 import { Button } from '../../components/Button'
 import { Header } from '../../components/Header'
 import { Input } from '../../components/Input'
 
-import {Column,Container,CriarText,Wrapper,Row,EsqueciText,Title,TitleLogin,TextContent, SubtitleLogin} from './style'
+import {Column,Container,CriarText,Wrapper,Row,EsqueciText,Title,TitleLogin, SubtitleLogin} from './style'
 
 const Login = () => {
+  
+  const navigate = useNavigate();
+
+  const handleClickSingIN = () => {
+    navigate('/feed')
+  }
+
   return (<>
     <Header/>
     <Container>
@@ -20,9 +28,9 @@ const Login = () => {
           <TitleLogin>Faça seu cadastro</TitleLogin>
           <SubtitleLogin>Faça seu login e make the change.</SubtitleLogin>
           <form>
-            <Input placeholder="E-mail"/> 
+            <Input placeholder="E-mail" type= "text"/> 
             <Input placeholder="Senha" type="password"/>  
-            <Button title="Entrar" variant="secondary"/>
+            <Button title="Entrar" variant="secondary" onclick={handleClickSingIN} type="button" />
           </form>
           <Row>
             <EsqueciText>Esqueci minha senha</EsqueciText>

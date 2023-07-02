@@ -14,22 +14,33 @@ UserPicture,
 Wrapper
 } from './styles';
 
-const Header = () =>{
+const Header = ({autenticado}) =>{
   return (
     <Wrapper>
       <Container>
         <Row>
             <img src={logo} alt="Logo da DIO"/>
-            <BuscarInputContainer>
-            <Input placeholder='Buscar'></Input>
-            </BuscarInputContainer>
-            <Menu>Live Code</Menu>
-            <Menu>Global</Menu>
+            {autenticado ? (
+            <>
+              <BuscarInputContainer>
+               <Input placeholder='Buscar'></Input>
+              </BuscarInputContainer>
+              <Menu>Live Code</Menu>
+              <Menu>Global</Menu>
+            </>
+            ) : null}
         </Row>
         <Row>
-            <MenuRight href=''>Home</MenuRight>
-            <Button title="Entrar"/>
-            <Button title="Cadastrar"/>
+        {autenticado ? (
+          <UserPicture src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/User_icon-cp.svg/1200px-User_icon-cp.svg.png"/>
+         ) 
+         :(
+            <>
+              <MenuRight href=''>Home</MenuRight>
+              <Button title="Entrar"/>
+              <Button title="Cadastrar"/>
+            </>
+        )}
         </Row>
      </Container>  
     </Wrapper>
